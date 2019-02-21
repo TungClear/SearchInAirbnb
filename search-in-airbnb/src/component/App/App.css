@@ -1,0 +1,186 @@
+.App{
+  margin: 0 15% 0 15%;
+  padding-top: 10%;
+}
+.titles{
+  font-size: 26px !important;
+  width: 712px !important;
+  color: #ffffff !important;
+  padding-left: 0px !important;
+  padding-right: 213.6px !important;
+  padding-bottom: 12px !important;
+  text-shadow: 1px 6px 84px rgba(0,0,0,0.8) !important;
+  margin-bottom: 30px;
+}
+.searchBar{
+  display: flex;
+  flex-wrap: wrap;
+  
+}
+.searchBar-content{
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+    background-color: white;
+    border-radius: 3px;
+    border: 1px solid rgb(235, 235, 235) !important;
+}
+.searchBar-city{
+  width: 59%;
+  border-right: 1px solid rgb(235, 235, 235) !important;
+  display: flex;
+  padding: 24px 0px 21px 10px;
+}
+.city-search-icon{
+  width: 8%;
+  font-size: 18px;
+}
+.city-inputCity{
+  width: 80%;
+}
+.city-inputCity input{
+  border: none;
+  font-size: 18px;
+  width: 100%;
+}
+.searchBar-dates{
+  width: 25%;
+  border-right: 1px solid rgb(235, 235, 235) !important;
+}
+.dates-title{}
+.dates-button{
+  margin-top: 11px;
+}
+.dates-button button{
+  border: none;
+  background: none;
+  padding: 0 !important;
+    color: #767676 !important;
+    font-size: 18px;
+    cursor: pointer;
+}
+.searchBar-guests{
+  width: 14%;
+}
+
+
+.recent-searches{
+  background: white;
+    width: 56%;
+    border: 1px solid rgb(235, 235, 235) !important;
+    display: none;
+    position: absolute;
+    margin: 46px 0px 0 -11px;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+
+}
+
+.recent-searches ul{
+  list-style-type: none;
+}
+
+.recent-searches ul li{
+  height: 50px;
+  line-height: 50px;
+    padding-left: 50px;
+}
+
+.recent-searches ul li:hover{
+  background-color:  rgb(242, 242, 242);
+}
+
+.recent-searches-li:hover{
+  background-color:  white !important;
+}
+
+.recent-searches-li-icon{
+  margin-right: 10px;
+}
+
+.DateInput{
+  width: 120px !important;
+}
+
+.DateRangePickerInput__withBorder{
+  border: none;
+}
+
+.DateInput_input{
+  width: 80% !important;
+}
+
+.guests-title{}
+.guests-choose{
+  display: none;
+  position: absolute;
+  background: white;
+  border: 1px solid rgb(235, 235, 235);
+  width: 15%;
+  margin: 16px 0px 0 -129px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+.guests-choose-content{}
+.guests-choose-item{
+  margin-top: 16px;
+    margin-bottom: 16px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.guests-choose-item-name{
+  width: 50%;
+    margin-top: 7px;
+    margin-left: 11px;
+
+}
+.guests-choose-item-content{
+}
+.guests-choose-item-button-minus{
+  background-color: white;
+  cursor: pointer !important;
+  height: 32px !important;
+  width: 32px !important;
+  border-radius: 50% !important;
+  border-style: solid !important;
+  border-color: rgb(0, 132, 137) !important;
+  border-width: 2px !important;
+  text-align: center;
+  font-size: 19px;
+  margin-right: 20px;
+}
+.guests-choose-item-button-plus{
+  background-color: white;
+  cursor: pointer !important;
+  height: 32px !important;
+  width: 32px !important;
+  border-radius: 50% !important;
+  border-style: solid !important;
+  border-color: rgb(0, 132, 137) !important;
+  border-width: 2px !important;
+  text-align: center;
+  font-size: 19px;
+  margin-left: 20px;
+}
+.guests-choose-item-text{
+  margin-top: 7px;
+}
+
+.guests-choose-apply{
+  height: 40px;
+}
+
+.guests-choose-apply-button{
+  float: right;
+    margin-right: 16px;
+    border: none;
+    background: white;
+    color: rgb(0, 132, 137) !important;
+    margin-top: 5px;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.guests-choose-apply-button:hover{
+  text-decoration: underline;
+}
