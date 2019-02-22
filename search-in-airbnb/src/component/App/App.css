@@ -23,10 +23,10 @@
   width: 80%;
     background-color: white;
     border-radius: 3px;
-    border: 1px solid rgb(235, 235, 235) !important;
+    /* border: 1px solid rgb(235, 235, 235) !important; */
 }
 .searchBar-city{
-  width: 59%;
+  width: 53%;
   border-right: 1px solid rgb(235, 235, 235) !important;
   display: flex;
   padding: 24px 0px 21px 10px;
@@ -46,8 +46,11 @@
 .searchBar-dates{
   width: 25%;
   border-right: 1px solid rgb(235, 235, 235) !important;
+  padding-left: 3px;
 }
-.dates-title{}
+.dates-title{
+  margin-bottom: 6px;
+}
 .dates-button{
   margin-top: 11px;
 }
@@ -58,19 +61,21 @@
     color: #767676 !important;
     font-size: 18px;
     cursor: pointer;
+    width: 100%;
+    text-align: left;
 }
 .searchBar-guests{
-  width: 14%;
+  width: 18%;
+  padding-left: 3px;
 }
-
 
 .recent-searches{
   background: white;
     width: 56%;
-    border: 1px solid rgb(235, 235, 235) !important;
-    display: none;
+    border-top: 1px solid rgb(235, 235, 235);
+    display: block;
     position: absolute;
-    margin: 46px 0px 0 -11px;
+    margin: 51px 0px 0 -10px;
     border-bottom-left-radius: 3px;
     border-bottom-right-radius: 3px;
 
@@ -84,6 +89,7 @@
   height: 50px;
   line-height: 50px;
     padding-left: 50px;
+    cursor: pointer;
 }
 
 .recent-searches ul li:hover{
@@ -112,12 +118,12 @@
 
 .guests-title{}
 .guests-choose{
-  display: none;
+  display: block;
   position: absolute;
   background: white;
   border: 1px solid rgb(235, 235, 235);
   width: 15%;
-  margin: 16px 0px 0 -129px;
+  margin: 21px 0px 0 -72px;
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px;
 }
@@ -136,7 +142,7 @@
 }
 .guests-choose-item-content{
 }
-.guests-choose-item-button-minus{
+.guests-choose-item-button-minus-adults, .guests-choose-item-button-minus-children, .guests-choose-item-button-minus-infants{
   background-color: white;
   cursor: pointer !important;
   height: 32px !important;
@@ -149,7 +155,7 @@
   font-size: 19px;
   margin-right: 20px;
 }
-.guests-choose-item-button-plus{
+.guests-choose-item-button-plus-adults, .guests-choose-item-button-plus-children, .guests-choose-item-button-plus-infants{
   background-color: white;
   cursor: pointer !important;
   height: 32px !important;
@@ -183,4 +189,85 @@
 
 .guests-choose-apply-button:hover{
   text-decoration: underline;
+}
+
+.searchBar-button{
+  padding: 20px ;
+  border: 1px solid #FF5A5F ;
+  border-radius: 5px;
+  color: #ffffff;
+  background: #FF5A5F;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.searchBar-button-submit{
+  width: 76px ;
+  height: 78px ;
+  text-align: center ;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 40%; /* Could be more or less, depending on screen size */
+  border-radius: 12px;
+}
+
+.modal-header{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.modal-header h2{
+  text-align: center;
+  width: 90%;
+  padding-left: 40px;
+}
+.modal-body{
+  margin: 5% 20%;
+}
+.modal-body table{
+  width: 100%;
+}
+.modal-body tr{
+  font-size: 23px;
+    height: 60px;
+    border-bottom: 1px solid;
+}
+.modal-body tr:hover {background-color: azure;}
+.modal-body tr td{border-bottom: 1px solid #ddd;}
+.modal-footer{}
+/* The Close Button */
+.close {
+  color: #aaa;
+  font-size: 30px;
+  font-weight: bold;
+  margin-top: -14px;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }
