@@ -26,8 +26,6 @@ class App extends Component {
     "Moscow"
   ]
 
-  windowObject = null;
-
   constructor(props) {
     super(props);
     this.state = {
@@ -36,6 +34,7 @@ class App extends Component {
       startDateString: "",
       endDateString: "",
       focusedInput: null,
+      autoFocus : "false",
       listCity: this.listCity,
       listCityRecent: this.listCityRecent,
       tempListCity: this.listCity,
@@ -84,7 +83,6 @@ class App extends Component {
       clickedSearchText: false
     })
   }
-
 
   onClickMinusButton = (event) => {
     const className = event.target.className;
@@ -148,17 +146,24 @@ class App extends Component {
 
   onClickSearchLi = (event) => {
     const value = event.target.innerText;
+    //thực hiện show date range picker tại đây
     this.setState({
       searchText: value,
-      clickedSearchText: false
+      clickedSearchText: false,
+      focusedInput: "startDate"
     })
-  }
 
+  }
 
   onClickSubmitButton = () => {
     const d = document;
     const modal = d.getElementById('myModal');
     modal.style.display = "block";
+    // const {listCityRecent, searchText} = this.state;
+    // this.listCityRecent.push(searchText);
+    // this.setState({
+    //   listCityRecent: listCityRecent.push(searchText)
+    // })
   }
 
   componentDidMount() {
@@ -176,6 +181,7 @@ class App extends Component {
         modal.style.display = "none";
       }
     }
+    
   }
 
   hideModal = () => {
@@ -184,12 +190,9 @@ class App extends Component {
     modal.style.display = "none";
   }
 
-  formatDate = () => {
-    const { startDate, endDate } = this.state;
-  }
-
   render() {
 
+    console.log(this.state.focusedInput);
     return (
       <div className="App">
         <div className="titles"><h1>Plan your next trip</h1></div>
@@ -202,10 +205,8 @@ class App extends Component {
                   onChange={this.renderListCity}
                   onClick={this.onClickSearchText}
                   value={this.state.searchText}
-
                 />
               </div>
-
               <InputSearch
                 searchText={this.state.searchText}
                 listCity={this.state.listCity}
@@ -226,6 +227,7 @@ class App extends Component {
                 onDatesChange={({ startDate, endDate }) => { this.setState({ startDate, endDate }) }}
                 focusedInput={this.state.focusedInput}
                 onFocusChange={(focusedInput) => { this.setState({ focusedInput }) }}
+                onClose={() => this.setState({clickedAmountGuest: true})}
               />
             </div>
             <div className="searchBar-guests" onPointerLeave={this.onPointerLeaveAmountGuestButton}>
@@ -233,7 +235,6 @@ class App extends Component {
               <div className="dates-button">
                 <button onClick={this.onClickAmountGuestButton}>{this.state.adults + this.state.children} Guest, {this.state.infants} Infants</button>
               </div>
-
               <ChooseAmountGuest
                 onClickMinusButton={this.onClickMinusButton} onClickPlusButton={this.onClickPlusButton}
                 adults={this.state.adults}
@@ -258,7 +259,6 @@ class App extends Component {
         // clickedSubmitButton={this.state.clickedSubmitButton}
         />
       </div>
-
     );
   }
 }
